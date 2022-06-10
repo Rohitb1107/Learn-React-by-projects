@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import AddContact from "./components/AddContact";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Contact manager</h1>
+      <Navbar />
+      <AddContact />
     </div>
   );
 }
