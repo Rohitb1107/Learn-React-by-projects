@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const ContactList = () => {
+const ContactList = ({ contacts }) => {
   return (
-    <div className='contact-list-div'>ContactList</div>
-  )
-}
+    <div className="contact-list-div">
+      {contacts.map((item) => {
+        return (
+          <div key={contacts.id}>
+            <div>{contacts.name}</div>
+            <div>{contacts.email}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-export default ContactList
+export default ContactList;
