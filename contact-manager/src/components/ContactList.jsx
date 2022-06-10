@@ -1,11 +1,28 @@
 import React from "react";
 import ContactCard from "./ContactCard";
 
-const ContactList = ({ contacts }) => {
+const ContactList = () => {
+  const contacts = [
+    {
+      id: 1,
+      name: "Thor",
+      email: "thor@gmail.com",
+    },
+    {
+      id: 2,
+      name: "Tony",
+      email: "tony@gmail.com",
+    },
+    {
+      id: 3,
+      name: "Hulk",
+      email: "hulk@gmail.com",
+    },
+  ];
   return (
     <div className="contact-list-div">
-      {contacts.map((item) => {
-        return <ContactCard contacts={contacts} />;
+      {contacts.map((contact) => {
+        return <ContactCard contact={contact} />;
       })}
     </div>
   );
