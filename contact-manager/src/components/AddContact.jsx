@@ -7,13 +7,11 @@ const AddContact = () => {
     email: "",
   });
 
-  function handleChange(event) {
-    const { name, value } = event.target;
-
+  function handleChange(e) {
     setAddData((prevdata) => {
       return {
         ...prevdata,
-        [name]: value,
+        [e.target.name]: e.target.value,
       };
     });
   }
