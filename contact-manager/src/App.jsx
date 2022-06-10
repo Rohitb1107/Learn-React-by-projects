@@ -8,27 +8,25 @@ function App() {
   const contacts = [
     {
       id: 1,
-      name: "Rohit",
-      email: "rohit@gmail.com",
+      name: "Thor",
+      email: "thor@gmail.com",
     },
     {
       id: 2,
-      name: "bagadi",
-      email: "bagadi@gmail.com",
+      name: "Tony",
+      email: "tony@gmail.com",
     },
     {
       id: 3,
-      name: "thor",
-      email: "thor@gmail.com",
+      name: "Hulk",
+      email: "hulk@gmail.com",
     },
   ];
   return (
     <div className="App">
       <Navbar />
       <AddContact />
-      {contacts.map((item) => {
-        return <ContactList contacts={contacts} />;
-      })}
+      <ContactList contacts={contacts} />
     </div>
   );
 }

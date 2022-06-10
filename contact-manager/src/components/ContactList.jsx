@@ -1,15 +1,11 @@
 import React from "react";
+import ContactCard from "./ContactCard";
 
 const ContactList = ({ contacts }) => {
   return (
     <div className="contact-list-div">
       {contacts.map((item) => {
-        return (
-          <div key={contacts.id}>
-            <div>{contacts.name}</div>
-            <div>{contacts.email}</div>
-          </div>
-        );
+        return <ContactCard contacts={contacts} />;
       })}
     </div>
   );

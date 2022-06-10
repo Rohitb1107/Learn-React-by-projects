@@ -24,3 +24,13 @@
   margin-top: 2rem;
   font-size: 1.5rem;
 }
+
+.item-div {
+  display: flex;
+  gap:5rem;
+  padding: 0.5rem;
+}
+
+.item-div img{
+    width: 35px;
+}
