@@ -4,6 +4,7 @@ import "./style.css";
 const AddContact = () => {
   return (
     <div className="input-div">
+      <h3>Add Contact</h3>
       <form className="w-20">
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Email address</label>
