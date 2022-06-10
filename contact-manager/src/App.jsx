@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AddContact from "./components/AddContact";
+import ContactList from "./components/ContactList";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <AddContact />
+      <ContactList />
     </div>
   );
 }
