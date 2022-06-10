@@ -6,3 +6,10 @@
   width: 20vw;
   margin: auto;
 }
+
+.nav-div {
+  width: 20vw;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
+}
