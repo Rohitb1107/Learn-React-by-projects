@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const AddContact = () => {
+  const [addData, setAddData] = useState({
+    name: "",
+    email: "",
+  });
+
+  function submitHandler(e) {
+    e.preventDefault();
+    if (addData.name === "" && addData.email === "") {
+      alert("All the fields are mandatory");
+      return;
+    }
+    console.log(addData);
+  }
+
   return (
     <div className="input-div">
       <h3>Add Contact</h3>
-      <form className="w-20">
+      <form className="w-20" onSubmit={submitHandler}>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Name</label>
           <input
+            onChange={(e) => setAddData({ name: e.target.value })}
             type="text"
+            name="name"
+            value={addData.name}
             className="form-control"
             placeholder="Enter name"
           />
@@ -17,7 +34,10 @@ const AddContact = () => {
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">Email</label>
           <input
+            onChange={(e) => setAddData({ email: e.target.value })}
             type="email"
+            name="email"
+            value={addData.email}
             className="form-control"
             placeholder="Enter email"
           />
