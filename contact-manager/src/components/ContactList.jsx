@@ -22,7 +22,11 @@ const ContactList = () => {
   return (
     <div className="contact-list-div">
       {contacts.map((contact) => {
-        return <ContactCard contact={contact} />;
+        return (
+          <div key={contact.id}>
+            <ContactCard contact={contact} />
+          </div>
+        );
       })}
     </div>
   );

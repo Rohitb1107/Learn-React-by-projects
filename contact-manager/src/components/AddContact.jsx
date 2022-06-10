@@ -7,22 +7,19 @@ const AddContact = () => {
       <h3>Add Contact</h3>
       <form className="w-20">
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
+          <label htmlFor="exampleInputEmail1">Name</label>
           <input
-            type="email"
+            type="text"
             className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="Enter name"
           />
         </div>
         <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
+          <label htmlFor="exampleInputPassword1">Email</label>
           <input
-            type="password"
+            type="email"
             className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
+            placeholder="Enter email"
           />
         </div>
         <button type="submit" className="btn btn-primary">
