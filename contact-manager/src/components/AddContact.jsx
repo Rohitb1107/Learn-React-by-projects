@@ -7,6 +7,17 @@ const AddContact = () => {
     email: "",
   });
 
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setAddData((prevdata) => {
+      return {
+        ...prevdata,
+        [name]: value,
+      };
+    });
+  }
+
   function submitHandler(e) {
     e.preventDefault();
     if (addData.name === "" && addData.email === "") {
@@ -23,7 +34,7 @@ const AddContact = () => {
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Name</label>
           <input
-            onChange={(e) => setAddData({ name: e.target.value })}
+            onChange={handleChange}
             type="text"
             name="name"
             value={addData.name}
@@ -34,7 +45,7 @@ const AddContact = () => {
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">Email</label>
           <input
-            onChange={(e) => setAddData({ email: e.target.value })}
+            onChange={handleChange}
             type="email"
             name="email"
             value={addData.email}
