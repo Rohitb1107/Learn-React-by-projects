@@ -18,10 +18,6 @@ const AddContact = () => {
 
   function submitHandler(e) {
     e.preventDefault();
-    if (addData.name === "" && addData.email === "") {
-      alert("All the fields are mandatory");
-      return;
-    }
     console.log(addData);
   }
 
