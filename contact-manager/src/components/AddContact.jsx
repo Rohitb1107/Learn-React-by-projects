@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-const AddContact = () => {
+const AddContact = (props) => {
   const [addData, setAddData] = useState({
     name: "",
     email: "",
@@ -18,6 +18,7 @@ const AddContact = () => {
 
   function submitHandler(e) {
     e.preventDefault();
+    props.AddContactHandler(addData);
     setAddData({
       name: "",
       email: "",

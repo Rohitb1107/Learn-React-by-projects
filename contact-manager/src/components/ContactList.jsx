@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ContactCard from "./ContactCard";
 
 const ContactList = () => {
-  const contacts = [
+  const [contacts, setContacts] = useState([
     {
       id: 1,
       name: "Thor",
@@ -18,7 +18,8 @@ const ContactList = () => {
       name: "Hulk",
       email: "hulk@gmail.com",
     },
-  ];
+  ]);
+
   return (
     <div className="contact-list-div">
       {contacts.map((contact) => {
