@@ -18,6 +18,10 @@ const AddContact = () => {
 
   function submitHandler(e) {
     e.preventDefault();
+    setAddData({
+      name: "",
+      email: "",
+    });
     console.log(addData);
   }
 
