@@ -18,6 +18,7 @@ const AddContact = (props) => {
 
   function submitHandler(e) {
     e.preventDefault();
+    props.addContactHandler(addData);
     setAddData({
       name: "",
       email: "",

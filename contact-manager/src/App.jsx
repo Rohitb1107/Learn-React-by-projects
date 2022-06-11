@@ -23,10 +23,15 @@ function App() {
     },
   ]);
 
+  const addContactHandler = (contact) => {
+    console.log(contact);
+    setContacts([...contacts, contact]);
+  };
+
   return (
     <div className="App">
       <Navbar />
-      <AddContact />
+      <AddContact addContactHandler={addContactHandler} />
       <ContactList contacts={contacts} />
     </div>
   );
