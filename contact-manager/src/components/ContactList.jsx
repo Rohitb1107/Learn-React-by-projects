@@ -21,14 +21,8 @@ const ContactList = () => {
     },
   ]);
 
-  function AddContactHandler(contact) {
-    // console.log(contact);
-    // setContacts(...contacts, contact);
-  }
-
   return (
     <div className="contact-list-div">
-      <AddContact AddContactHandler={AddContactHandler} />
       {contacts.map((contact) => {
         return (
           <div key={contact.id}>

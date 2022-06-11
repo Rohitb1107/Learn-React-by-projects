@@ -5,15 +5,11 @@ import ContactList from "./components/ContactList";
 import Navbar from "./components/Navbar";
 
 function App() {
-
-
-
-
   return (
     <div className="App">
       <Navbar />
-      {/* <AddContact /> */}
-      <ContactList  />
+      <AddContact />
+      <ContactList />
     </div>
   );
 }
