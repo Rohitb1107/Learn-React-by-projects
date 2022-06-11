@@ -6,7 +6,13 @@ import Navbar from "./components/Navbar";
 
 function App() {
   const LOCAL_STORAGE_KEY = "contacts";
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState([
+    {
+      id: 1,
+      name: "thor",
+      email: "thor@gmail.com",
+    },
+  ]);
 
   const addContactHandler = (contact) => {
     console.log(contact);
