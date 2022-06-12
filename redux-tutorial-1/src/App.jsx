@@ -2,9 +2,27 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
     <div className="App">
-      <h1>Redux tutorial</h1>
+      <div>{count}</div>
+      <div>
+        <button
+          onClick={() => {
+            setCount(count + 1);
+          }}
+        >
+          +
+        </button>
+
+        <button
+          onClick={() => {
+            setCount(count - 1);
+          }}
+        >
+          -
+        </button>
+      </div>
     </div>
   );
 }
