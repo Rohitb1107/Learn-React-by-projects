@@ -5,7 +5,7 @@ function App() {
   // const [count, setCount] = useState(0);
   return (
     <div className="App">
-      <div>{count}</div>
+      <div>0</div>
       <div>
         <button>+</button>
         <button>-</button>
