@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const TodoInput = () => {
   const [task, setTask] = useState("");
@@ -6,12 +6,13 @@ const TodoInput = () => {
   function handleChange(e) {
     setTask(e.target.value);
   }
-  
+
   return (
     <div>
       <h3>Add Todo</h3>
+      <div>{task}</div>
       <input
-        value={title}
+        value={task}
         onChange={handleChange}
         type="text"
         placeholder="add task"
